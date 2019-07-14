@@ -48,9 +48,9 @@ list<list<bitset<MAX_BITSET_SIZE>>> findCombinations(int n, unordered_map<string
     list<list<bitset<MAX_BITSET_SIZE>>> breakups;
     int index = 0;
     
-   	for (int i=0; i < n; i++) {
-    	ticket.set(i, 1); // we start with ones!
-	}
+    for (int i=0; i < n; i++) {
+        ticket.set(i, 1); // we start with ones!
+    }
         
     while(index < n) {
         breakup.clear();
