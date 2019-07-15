@@ -52,7 +52,7 @@ var findCombinations = function(n, combinations) {
 	var previousCombinations;
 
 	for (var i=0; i < n; i++) {
-		bits[i] = 1; // construct a full 1's bitset
+            bits[i] = 1; // construct a full 1's bitset
 	}
 
 
@@ -60,15 +60,15 @@ var findCombinations = function(n, combinations) {
 	    breakup = [];
 
 	    flip(bits, index);
-		breakup.push(prettyBits(bits));
+	    breakup.push(prettyBits(bits));
 
-		copyBits = [...bits];
-		flip(copyBits);
-		breakup.push(prettyBits(copyBits));
+	    copyBits = [...bits];
+	    flip(copyBits);
+	    breakup.push(prettyBits(copyBits));
 
 	    breakups.push(breakup);
 	    previousCombinations = getPreviousCombinations(n, combinations, copyBits, bits)
-		breakups = breakups.concat(previousCombinations);
+	    breakups = breakups.concat(previousCombinations);
 
 	    index--;
 	}
